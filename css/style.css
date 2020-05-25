@@ -47,13 +47,15 @@ body {
 
   h1 {
     font-size: 80px;
+    line-height: 1;
   }
 
   h2 {
     font-size: 45px;
   }
   .wrap {
-    width: 800px;
+    max-width: 800px;
+    width: 85%;
     margin: 0 auto;
     padding: 60px 0;
   }
@@ -87,7 +89,6 @@ body {
   header {
     background: #2F3061;
     color: #F7FFF7;
-    text-align: center;
   }
   
   
@@ -118,8 +119,6 @@ body {
   }
 
   .project-item img {
-    float: left;
-    margin-right: 10px;
     border-radius: 9px;
   }
 
@@ -131,20 +130,33 @@ body {
   
   /* Work Experience
   ------------------------------------*/
-  .work-experience {
+  .experience {
     background: #A1C6D7;
+    /* background-image: url(/images/sharon-mccutcheon-unsplash.jpg);
+    background-size: cover; */
   }
 
+  /* .experience > section {
+    width: 80%;
+  } */
+
   .job-item {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 20px;
+    display: block;
   }
   
   
   /* Education
   ------------------------------------*/
-  
+  .education {
+    background-image: url(/images/joanna-kosinska-unsplash.jpg);
+    background-size: cover;
+    background-position: top right;
+
+  }
+
+  .education p {
+    width: 60%;
+  }
   
   
   /* Contact Info
@@ -152,6 +164,38 @@ body {
   footer {
     background: #343434;
     color: #F7FFF7;
+  }
+
+  .contact-list {
+    list-style-type: none ;
+    padding: 0;
+  }
+  
+  .contact-list a {
+    padding: 5px;
+    display: inline-block;
+  }
+
+
+/* Responsive
+------------------------------------*/
+
+@media screen and (min-width : 750px){
+  .project-item img {
+    float: left;
+    margin-right: 10px;
+    border-radius: 9px;
+  }
+}
+
+@media screen and (min-width : 700px){
+  .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+
+  header , footer {
     text-align: center;
   }
 
@@ -166,3 +210,10 @@ body {
     padding: 15px;
     display: inline-block;
   }
+}
+
+@media screen and (max-width : 749px){
+  h1 {
+    font-size: 60px;
+  }
+}
