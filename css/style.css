@@ -143,6 +143,20 @@ body {
   .job-item {
     display: block;
   }
+
+  .job-summary p {
+    margin: 0;
+  }
+
+  .job-summary p:first-child {
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  .job-summary ul::before {
+    content: attr(aria-label);
+    font-weight: 600;
+  }
   
   
   /* Education
